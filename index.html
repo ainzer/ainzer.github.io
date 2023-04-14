@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="menu-bar">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="logo">
+            <a href="#" class="logo"><img src="image/france.png" alt=""><span>SPICHER</span></a>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#" class="active">HOME</a></li>  
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">PORTFOLIO</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">BLOG</a></li>
+            </ul>
+        </nav>
+        <button class="btn">RESUME <i class="fa fa-arrow-down"></i></button>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="heading">
+                <h1>Hello,</h1>
+                <h2>I'M Tony.</h2>
+                <h4>UI/UX Designer</h4>
+                <p>Must explain to how all this idea debouncing pleasure pain the system and expound the actua.</p>
+                <button class="btn">HIRE ME <span><i class="fa fa-arrow-right"></i></span></button>
+            </div>
+            <div class="headerimg">
+                <img src="image/kirito.jpg" alt="" id="kirito">
+                <img src="image/html-5.png" alt="" id="html">
+                <img src="image/css-3.png" alt="" id="css">
+                <img src="image/js.png" alt="" id="js">
+            </div>
+        </div>
+    </div>
+    </header>
+    <script>
+        let menu = document.querySelector(".fa-bars");
+        let nav = document.querySelector("nav");
+        menu.addEventListener("click", function(){
+            menu.classList.toggle("fa-xmark");
+            nav.classList.toggle("active");
+        })
+        window.addEventListener("scroll", function(){
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("sticky", window.scrollY > 0); 
+        })
+    </script>
+</body>
+
+</html>
